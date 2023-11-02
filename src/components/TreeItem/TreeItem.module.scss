@@ -1,0 +1,25 @@
+.Wrapper {
+  &.ghost {
+    &.indicator {
+      .TreeItem {
+        &:before {
+          content: "";
+          display: block;
+          width: 100%;
+          position: relative;
+          height: 32px;
+          background-color: rgba(0, 0, 0, 0.03);
+        }
+
+        > * {
+          /* Items are hidden using height and opacity to retain focus */
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.disableInteraction {
+  pointer-events: none;
+}
